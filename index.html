@@ -159,6 +159,27 @@
             
             
         }
+        
+        .contact{
+            visibility: hidden;
+            animation-duration:2s;
+            animation-name:animate;
+            animation-direction: alternate;
+            animation-fill-mode: forwards;
+        }
+        
+        @keyframes animate {
+            0%{
+                visibility: hidden;
+                transform:translate(0px,200px);
+                
+            }
+            
+            100%{
+                visibility: visible;
+                transform:translate(0px,0px);
+            }
+        }
 
         @media screen and (max-width: 1000px) {
             .nav {
@@ -194,9 +215,7 @@
                 width: 100%;
 
             }
-            .menu{
-                
-            }
+            
 
             .menu.responsive {
                 position: relative;
@@ -260,15 +279,17 @@
                 </h4>
                 <br>
                 <br>
-                <h3>
+                <h3><div class="contact">
                     <strong>Contact Me:</strong>
+                    </div>
                 </h3>
-                <h6>
+                <h6><div class="contact">
                     <ul>
                         <li><a href="https://linkedin.com/in/grant-amann">Linkedin</a></li>
                         <br>
                         <li><a href="mailto:gamann@usc.edu">Email</a></li>
                     </ul>
+                    </div>
                 </h6>
 
             </div>
