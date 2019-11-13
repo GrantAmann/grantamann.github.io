@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Raleway:600&display=swap');
+
+
+        html,
+        body {
+            margin: 0px;
+            height: 100%;
+            font-family: 'Raleway', sans-serif;
+        }
+
+        .why,.contact,.how{
+            color: #777;
+            background-color: white;
+            text-align: center;
+            
+            padding:50px 80px;
+            font-family: 'Raleway', sans-serif;
+            font-size:1.3em;
+            
+        }
+        h3{
+            text-align: center;
+            color:black;
+        }
+        
+        .img1,.img2,.img3{
+             position:relative;
+            background-attachment: fixed;
+            background-position: center;
+            background-size:cover;
+            background-repeat:no-repeat;
+            opacity: 0.7;
+        }
+        .img1{
+           
+            background-image:url(img/spain.jpg);
+            min-height: 90%;
+        }
+        
+        .img2{
+            background-image:url(img/argentina.jpg);
+            min-height: 70%;
+        }
+        
+        .img3{
+            
+            background-image:url(img/mendoza.jfif);
+            min-height: 50%;
+        }
+        
+        .menu {
+            overflow: hidden;
+            background-color: white;
+            z-index: 10;
+            font-family: 'Raleway', sans-serif;
+
+        }
+
+        .nav {
+            position: absolute;
+            height: 90px;
+            background-color: white;
+            line-height: 50px;
+            width: 100%;
+            margin-right: auto;
+            margin-left: auto;
+            visibility: visible;
+            z-index: 10;
+
+        }
+
+        .top {
+            width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+
+        .menu a {
+            float: right;
+            display: block;
+            color: black;
+            text-align: center;
+            padding: 14px 7px;
+            text-decoration: none;
+            font-size: 1.6em;
+
+        }
+
+        .menu a#active {
+            float: left;
+        }
+
+        .menu a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+
+        .menu .icon {
+            display: none;
+        }
+        
+        .caption{
+            position:absolute;
+            top:50%;
+            width:100%;
+            text-align: center;
+            font-size:25px;
+           
+        }
+        
+        .caption span{
+            background-color:black;
+            color:white;
+            padding:18px;
+            font-size:25px;
+            
+        }
+         @media screen and (max-width: 700px) {
+            .menu a:not(:first-child) {
+                display: none;
+            }
+
+            .menu a.icon {
+                
+                display: block;
+            }
+            
+            
+            
+        }
+
+        @media screen and (max-width: 1000px) {
+            .nav {
+                            
+                width: 100%;
+
+            }
+            .menu{
+                padding-left:10px;
+                padding-right: 10px;
+                
+            }
+            
+            .left{
+                height:50%;
+                width:100%;
+                background: url(img/doheny2.jpg);
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+                
+                
+                
+            }
+            .right{
+                float:left;
+                clear:left;
+                width:100%;
+                top:-20px;
+            }
+
+            .top {
+                width: 100%;
+
+            }
+            .menu{
+                
+            }
+
+            .menu.responsive {
+                position: relative;
+            }
+
+            .menu.responsive .icon {
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+
+            .menu.responsive a {
+                float: none;
+                display: block;
+                text-align: right;
+                
+            }
+        }
+        
+    </style>
+</head>
+
+<body>
+    
+    <div class="nav">
+        <div class="top">
+            <div class="menu" id="myMenu">
+                <a href="homepage.html" id="active">Grant Amann</a>
+                <a><br></a>
+                <a href="quote_page.html">quotes</a>
+                <a href="final_blog.html">tutor</a>
+                <a href="about_me.html">about</a>
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="img1">
+        <div class="caption">
+            <span>Need help learning Spanish?</span>
+        </div>
+    </div>
+    
+    <div class="why">
+        <h3>Why Should I Learn Spanish?</h3>
+        <p>Spanish is the third most spoken language in the world! Spanish is used in over 50 countries.  It is a very old language, and is closely related to Latin-which is related to many other </p>
+    
+    </div>
+
+    <div class="img2">
+        <div class="caption">
+            <span>Get better grades! Visit cool countries!</span>
+        </div>
+    
+    </div>
+    
+    <div class="how">
+        <h3>My Approach</h3>
+        <p>I lived in Argentina from 2016 to 2018! During that time, I spoke and learned Spanish in a very natural way by communicating and interacting with Argentinos. My approach to teaching is similar to the way I learned myself, but easier with some tricks and hints I wish I had known!  I focus on phonetics and sounds first so that accents cannot be detected, so that your Spanish ability is said without a "gringo" accent!  Then, I believe it is most important to focus on verbs.  This approach will actually get you able to speak and communicate with others. </p>
+    
+    </div>
+
+    <div class="img3">
+        <div class="caption">
+                <span>"Hay que hacerlo."</span>
+        </div>
+    </div>
+    
+    <div class="contact">
+        <h3>Contact Me!</h3>
+        <p>You can reach me at my email. I am able to meet in Downtown Los Angeles area, or online through video call. </p>
+    
+    </div>
+    
+ <script>
+        function myFunction() {
+            var x = document.getElementById("myMenu");
+            if (x.className === "menu") {
+                x.className += " responsive";
+            } else {
+                x.className = "menu";
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>
