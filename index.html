@@ -2,66 +2,41 @@
 <html>
 
 <head>
+   
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css?family=Raleway:600&display=swap');
 
-
-        html,
-        body {
-            margin: 0px;
-            height: 100%;
-            
-        }
-
-        body {
-            margin: 0;
+        html {
+            background-color: black;
+            margin-top: -10px;
+            margin-left:-10px;
+            padding:0px;
             font-family: 'Raleway', sans-serif;
-            padding: 0px;
-
-        }
-        h1{
-            padding-left:10px;
+            
             
         }
-        h4,h3{
-            padding-left:10px;
-            padding-right:10px;
-        }
-        #body {
-            padding-top: 80px;
-            float: left;
-            margin-left: 4px;
-            margin-right: 4px;
-            font-size: .8em;
-            width: 100%;
-
-        }
-
-        #main {
-            width: 1000px;
-            margin-left: auto;
-            margin-right: auto;
-
-        }
-
+        
         .menu {
             overflow: hidden;
-            background-color: white;
-
+            background-color: transparent;
+            z-index: 10;
+            font-family: 'Raleway', sans-serif;
+            
 
         }
 
         .nav {
             position: absolute;
-            height: 80px;
-            background-color: white;
+            height: 82px;
+            background-color: transparent;
             line-height: 50px;
             width: 100%;
             margin-right: auto;
             margin-left: auto;
             visibility: visible;
+            z-index: 10;
 
         }
 
@@ -69,13 +44,14 @@
             width: 1000px;
             margin-left: auto;
             margin-right: auto;
+            background-color: transparent;
         }
 
 
         .menu a {
             float: right;
             display: block;
-            color: black;
+            color: white;
             text-align: center;
             padding: 14px 7px;
             text-decoration: none;
@@ -85,11 +61,10 @@
 
         .menu a#active {
             float: left;
-            visibility: visible;
         }
 
         .menu a:hover {
-            border-bottom: navy;
+            background-color: #ddd;
             color: black;
         }
 
@@ -98,63 +73,46 @@
             display: none;
         }
         
-        .body {
-            float: left;
-        }
-
-
-
-        .text {
-            margin: 30px;
-            float: left;
-            font-size: 1.5em;
-        }
-
-        .wrap {
-            width: 100%;
-            margin: 0px;
-            float: left;
-            height: 100%;
-
-        }
-
-        .left {
-            width: 53%;
-            float: left;
-            opacity: .5;
-            z-index: -8;
-            height: 100%;
-
-            position: relative;
-            background: url(img/doheny2.jpg);
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
+        
+        .content{
+            float:left;
+            position:absolute;
+            top: 80%;
+            left: 30%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 2em;
             
         }
-
-
-        .right {
-            width: 47%;
-            float: left;
-            position: relative;
-            top: 90px;
-
+        .nav {
+            background-color: rgba(0, 0, 0, 0);
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0);
+            z-index: 5;
+           
         }
 
-        .text {
-            padding: 20px;
-
+        .video-container {
+            z-index: -10;
+            opacity: 0.7;
+            position: absolute;
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+            opacity: 0.5;
         }
 
-        a {
-            text-decoration: none;
-            color: black;
+        .video-container video {
+            min-height: 100%;
+            min-width: 100%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            background-color: rgba(0, 0, 0, 0.3);
+            transform: translate(-50%, -50%);
+            z-index: -10;
 
         }
-
-
-
+        
         @media screen and (max-width: 700px) {
             .menu a:not(:first-child) {
                 display: none;
@@ -168,37 +126,9 @@
             
             
         }
-        
-               
-        
-        
-        .popout{
-            
-            animation-duration:2s;
-            animation-name:animate;
-            animation: animate .6s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
-        }
-        
-        @keyframes animate {
-            0% {
-                box-shadow: 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e;
-                transform: translateX(0) translateY(0);
-                border: 1px solid gray;
-              }
-              100% {
-                box-shadow: 1px 1px #3e3e3e, 2px 2px #3e3e3e, 3px 3px #3e3e3e, 4px 4px #3e3e3e, 5px 5px #3e3e3e, 6px 6px #3e3e3e, 7px 7px #3e3e3e, 8px 8px #3e3e3e;
-                transform: translateX(-8px) translateY(-8px);
-                border: 1px solid black;
-                
-              }
-            }
 
         @media screen and (max-width: 1000px) {
-            
-            .popout{
-                border: 2px solid black;
-            }
-                .nav {
+            .nav {
                             
                 width: 100%;
 
@@ -209,29 +139,15 @@
                 
             }
             
-            .left{
-                height:50%;
-                width:100%;
-                background: url(img/doheny2.jpg);
-                background-repeat: no-repeat;
-                background-size: cover;
-                background-position: center;
-                
-                
-                
-            }
-            .right{
-                float:left;
-                clear:left;
-                width:100%;
-                top:-20px;
-            }
+            
 
             .top {
                 width: 100%;
 
             }
-            
+            .menu{
+                
+            }
 
             .menu.responsive {
                 position: relative;
@@ -250,22 +166,20 @@
                 
             }
         }
-        
-        
-        
+
     </style>
+
 </head>
 
 <body>
-
     <div class="nav">
         <div class="top">
             <div class="menu" id="myMenu">
-                <a href="homepage.html" id="active">Grant Amann</a>
+                <a href="grant/index.html">Grant Amann</a>
                 <a><br></a>
                 <a href="quote_page.html">quotes</a>
-                <a href="grant/tutor.html">tutor</a>
-                <a href="about_me.html">about</a>
+                <a href="tutor.html">tutor</a>
+                <a href="grant/index.html">about</a>
                 <a href="javascript:void(0);" class="icon" onclick="myFunction()">
                     <i class="fa fa-bars"></i>
                 </a>
@@ -274,50 +188,26 @@
     </div>
 
 
-
-
-    <div class="wrap">
-        <div class="left">
-            <div class="img_wrap">
-
-            </div>
-        </div>
-        <div class="right">
-            <div class="text">
-                <div class="popout">
-                <h1>
-                    Hello! I'm Grant.
-                </h1>
-                <h4>
-                    I am a junior studying Urban Studies and Planning at the University of Southern California.
-                </h4>
-                <h4>
-                    I made this website for my family and to show off some of the things I've done!
-
-                </h4>
-                </div>
-                <br>
-                <br>
-               
-                <div class="popout"><h3>
-                    <strong>Contact Me:</strong>
-                    
-                </h3>
-                <h6>
-                    <ul>
-                        <li><a href="https://linkedin.com/in/grant-amann">Linkedin</a></li>
-                        <br>
-                        <li><a href="mailto:gamann@usc.edu">Email</a></li>
-                    </ul>
-                    </h6>
-                    </div>
+<div class="content">
+    <p>love all.</p>
+    
+</div>
+    <!--
                 
-                
+            <p>"You are never too young to learn, or too old to change."
+            </p>
+-->
 
-            </div>
-        </div>
+
+    <div class="video-container">
+
+
+        <video playsinline loop autoplay muted control src="img/city.mp4"></video>
+
+
+
+
     </div>
-
     <script>
         function myFunction() {
             var x = document.getElementById("myMenu");
@@ -329,6 +219,7 @@
         }
 
     </script>
+
 
 </body>
 
