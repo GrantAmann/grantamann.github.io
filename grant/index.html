@@ -82,16 +82,17 @@
             font-size: 1.6em;
 
         }
+        .menu a:hover{
+            border-bottom:4px solid #4d7ea8;
+            
+        }
 
         .menu a#active {
             float: left;
             visibility: visible;
         }
 
-        .menu a:hover {
-            border-bottom: navy;
-            color: black;
-        }
+        
 
 
         .menu .icon {
@@ -178,6 +179,17 @@
             animation-name:animate;
             animation: animate .6s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
         }
+        .popout a{
+            display: block;
+            margin-left:40px;
+            padding-left:10px;
+            padding-right:40px;
+            width: 100px;
+            
+        }
+        .popout a:hover{
+            border-bottom:2px solid #4d7ea8;
+        }
         
         @keyframes animate {
             0% {
@@ -186,9 +198,10 @@
                 border: 1px solid gray;
               }
               100% {
-                box-shadow: 1px 1px #3e3e3e, 2px 2px #3e3e3e, 3px 3px #3e3e3e, 4px 4px #3e3e3e, 5px 5px #3e3e3e, 6px 6px #3e3e3e, 7px 7px #3e3e3e, 8px 8px #3e3e3e;
+                box-shadow: 1px 1px #4d7ea8, 2px 2px #4d7ea8, 3px 3px #4d7ea8, 4px 4px #4d7ea8, 5px 5px #4d7ea8, 6px 6px #4d7ea8, 7px 7px #4d7ea8, 8px 8px #4d7ea8;
                 transform: translateX(-8px) translateY(-8px);
-                border: 1px solid black;
+                border: 2px solid #000;
+                
                 
               }
             }
@@ -261,7 +274,7 @@
     <div class="nav">
         <div class="top">
             <div class="menu" id="myMenu">
-                <a href="homepage.html" id="active">Grant Amann</a>
+                <a href="https://amannfamily.org" id="active">Grant Amann</a>
                 <a><br></a>
                 <a href="quote_page.html">quotes</a>
                 <a href="tutor.html">tutor</a>
@@ -304,11 +317,10 @@
                     
                 </h3>
                 <h6>
-                    <ul>
-                        <li><a href="https://linkedin.com/in/grant-amann">Linkedin</a></li>
+                    <a href="https://linkedin.com/in/grant-amann">Linkedin</a>
                         <br>
-                        <li><a href="mailto:gamann@usc.edu">Email</a></li>
-                    </ul>
+                        <a href="mailto:gamann@usc.edu">Email</a></li>
+                    
                     </h6>
                     </div>
                 
