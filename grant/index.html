@@ -55,7 +55,9 @@
         .menu {
             overflow: hidden;
             background-color: white;
-
+            z-index: 10;
+            font-family: 'Raleway', sans-serif;
+          
 
         }
 
@@ -89,13 +91,18 @@
 
         }
         .menu a:hover{
-            border-bottom:4px solid #4d7ea8;
+            background-color: #ddd;
+            color:black;
             
         }
 
-        .menu a#active {
+        .menu a#grant {
             float: left;
             visibility: visible;
+            
+        }
+        .menu a#active{
+            backgroud-color:black;
         }
 
         
@@ -104,6 +111,7 @@
         .menu .icon {
             display: none;
         }
+        
         
         .body {
             float: left;
@@ -272,6 +280,7 @@
         
         
         
+        
     </style>
 </head>
 
@@ -280,12 +289,12 @@
     <div class="nav">
         <div class="top">
             <div class="menu" id="myMenu">
-                <a href="https://amannfamily.org" id="active">Grant Amann</a>
+                <a href="../index.html" id="grant">Grant Amann</a>
                 <a><br></a>
-                <a href="quote_page.html">articles</a>
-                <a href="quote_page.html">resume</a>
+                <a href="articles.html">articles</a>
+                <a href="img/resume.pdf">resume</a>
                 <a href="tutor.html">tutor</a>
-                <a href="about_me.html">about</a>
+                <a href="index.html" id="active">about</a>
                 <a href="javascript:void(0);" class="icon" onclick="myFunction()">
                     <i class="fa fa-bars"></i>
                 </a>
@@ -326,7 +335,7 @@
                 <h6>
                     <a href="https://linkedin.com/in/grant-amann">Linkedin</a>
                         <br>
-                        <a href="mailto:gamann@usc.edu">Email</a></li>
+                        <a href="mailto:gamann@usc.edu">Email</a>
                     
                     </h6>
                     </div>
@@ -336,6 +345,7 @@
             </div>
         </div>
     </div>
+
 
     <script>
         function myFunction() {
