@@ -26,17 +26,16 @@ html,
         }
 
 .nav {
-            
+           
 
             position: absolute;
             height: 82px;
-            background-color: transparent;
+            background-color: white;
             line-height: 50px;
             width: 100%;
             margin-right: auto;
             margin-left: auto;
             visibility: visible;
-            z-index: 10;
             
 
         }
