@@ -7,9 +7,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <style>
-        img{
-            width:500;
+        .image{
+            
+            
+            background-image: url(img/la.jpg);
+            background-size:cover;
+            min-height:70%;
+            margin-left:20px;
+            margin-top:110px;
+            
+            margin-right:30px;
+/*            background-position: center;*/
         }
+        
         .content {
             float: left;
             width: 435;
@@ -78,6 +88,12 @@
             font-weight: 600;
             color: #8c3535;
         }
+        
+        @media screen and (max-width: 400px) {
+            width:300px;
+            height:auto;
+            
+        }
 
     </style>
 </head>
@@ -109,16 +125,21 @@
 
                 <div class="title"><a>Home</a></div>
                 <br>
+                
+                
+                
                 <font size=2 face="verdana">
                     Grant's personal website<br><br>
-                    <img src="img/la.jpg">
+                    
                 
                     
                     
-                    <br><br><br><br><br><br></font>
+                    </font>
             </td><br>
         </table>
     </div>
+    <div class="image"></div>
+<!--    <img src="img/la.jpg">-->
 </body>
 
 </html>
